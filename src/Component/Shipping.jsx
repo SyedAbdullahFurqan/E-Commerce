@@ -8,7 +8,7 @@ const Shipping = () => {
   return (
     <div>
       
-<div className='grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3 grid-cols-2 mt-5 mx-4 gap-5'>
+<div className='grid lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-3  grid-cols-2 mt-5 mx-4 gap-5'>
   <div className='border-2 w-full border-gray-300 p-5'>
     <p className='flex justify-center'>
       <FaShippingFast className="text-3xl text-red-600"/>

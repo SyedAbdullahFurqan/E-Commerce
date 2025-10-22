@@ -9,8 +9,7 @@ const Singles = () => {
  
  <Navbar />
  <Outlet />
- <Footer/>
- 
+
  </>
    )
 

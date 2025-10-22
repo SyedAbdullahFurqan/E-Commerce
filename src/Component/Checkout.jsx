@@ -65,19 +65,19 @@ function handle(e) {
           <Typography>
           <div>
            
-     <input type="text" className='bg-amber-400 w-100' value={Details.names}  name='names' required onChange={handle} />
+     <input type="text" className='bg-gray-400 text-white  w-100' value={Details.names}  name='names' required onChange={handle} />
 
           <Typography>
           <label htmlFor="">Email</label>
 </Typography>
-     <input type="email" className='bg-amber-400 w-100' value={Details.emails} name='emails' required onChange={handle}  />
+     <input type="email" className='bg-gray-400 text-white  w-100' value={Details.emails} name='emails' required onChange={handle}  />
 
           <Typography>
           <label htmlFor="">Phone</label>
 </Typography>
 
            
-     <input type="tel"  className='bg-amber-400 w-100'value={Details.phone} name='phone' required onChange={handle} />
+     <input type="tel"  className='bg-gray-400 text-white  w-100'value={Details.phone} name='phone' required onChange={handle} />
 </div>
           </Typography>
         </AccordionDetails>
@@ -98,13 +98,13 @@ function handle(e) {
           <Typography>
           <label htmlFor="">Address</label>
 </Typography>
-     <input type="text" className='bg-amber-400 w-100'  value={Details.addres} required name='addres'  onChange={handle} />
+     <input type="text" className='bg-gray-400 text-white w-100'  value={Details.addres} required name='addres'  onChange={handle} />
 
      
           <Typography>
           <label htmlFor="">City</label>
 </Typography>
-     <input type="text" className='bg-amber-400 w-100'  value={Details.city}  name='city' required onChange={handle} />
+     <input type="text" className='bg-gray-400 text-white  w-100'  value={Details.city}  name='city' required onChange={handle} />
 
           </Typography>
         </AccordionDetails>
@@ -137,7 +137,7 @@ function handle(e) {
 
     </div>
 
-<div className='border-2 border-amber-600 py-4 w-150'>
+<div className='border-2 border-gray-500 py-4 w-150'>
 
     
       {maps.map((daad)=>{
@@ -185,7 +185,7 @@ function handle(e) {
     )
       })}
  
-  <div className='border-t-2 grid grid-cols-2 border-t-amber-400 border-b-2 border-b-amber-400 pt-5'>
+  <div className='border-t-2 grid grid-cols-2 border-t-gray-400 border-b-2 border-b-gray-400 pt-5'>
 
   <h3 className='w-60 mx-auto'>Total Price</h3>
 <p className='text-end  mx-5 pb-4'>{Math.ceil(price)}$</p>
@@ -193,7 +193,7 @@ function handle(e) {
 </div>
          <div className=' text-center w-100 m-auto '>
 
-      <button className='px-6 border-2 rounded-2xl cursor-pointer mt-4 py-3'  >Place Order</button>
+      <button className='px-6 border-2 rounded-2xl cursor-pointer mt-4 py-3 hover:bg-cyan-500 hover:text-white'  >Place Order</button>
     </div>
 </div>
 

@@ -38,7 +38,7 @@ function delets(product) {
   return (
     <div>
      
-<div className='grid grid-cols-6 border-2 border-amber-300 mt-5 place-content-center place-items-center my-4'>
+<div className='grid grid-cols-6 border-2 border-gray-500  mx-3 place-content-center place-items-center my-4  '>
 
   {item.map((daad)=>{
    
@@ -80,7 +80,7 @@ price * daad.quantity )
           aria-label="Increment value"
           onClick={() => dis(increment(daad.id))}
         >
-       <p className='md:py-2 md:px-4 sm:py-3 sm:px-2 px-3 py-1 bg-amber-300 cursor-pointer'>+</p>
+       <p className='md:py-2 md:px-4 sm:py-3 sm:px-2 px-3 py-1 bg-gray-300 cursor-pointer'>+</p>
         </button>
        
         <span className='mx-4'>{daad.quantity || count}</span>
@@ -91,13 +91,13 @@ price * daad.quantity )
         >
 
 
-        <p className='sm:py-3 sm:px-2 md:py-2 md:px-4 px-1 py-2 bg-amber-300 cursor-pointer'>-</p>
+        <p className='sm:py-3 sm:px-2 md:py-2 md:px-4 px-1 py-2 bg-red-600 cursor-pointer'>-</p>
         </button>
 
 </div>
 
 <div>
-  <button className='p-4 border-2 rounded-2xl border-amber-400 cursor-pointer ' onClick={()=> delets(daad.id)} >Delete</button>
+  <button className='p-4 border-2 rounded-2xl border-gray-300 cursor-pointer ' onClick={()=> delets(daad.id)} >Delete</button>
 </div>
 
   </>
@@ -107,7 +107,7 @@ price * daad.quantity )
 </div>
 
 
-<div className='bg-amber-500 border-2 w-80 h-70 rounded-3xl text-center items-center pb-4 m-auto'>
+<div className='bg-gray-300 border-2 w-80 h-70 rounded-3xl text-center items-center pb-4 m-auto'>
 
 <h3 className='mt-4'>Cart  Total</h3>
 <div className='grid grid-cols-2 gap-5 my-4'>
@@ -121,7 +121,7 @@ price * daad.quantity )
 
 <div className=''>
 <h4>{totalItems} </h4>
-<h3 className='my-6'>free</h3>
+<h3 className='my-6 uppercase'>free</h3>
 
   <p>{ Math.ceil(totalPrice) }$</p>
     {/* {item.map((values)=>{
@@ -133,7 +133,7 @@ return(
 </div>
 
 </div>
-<NavLink to={"/checkout"}><button className='bg-amber-100 rounded-3xl px-6 mt-4 py-3 cursor-pointer'>Processed to Checkout</button></NavLink>
+<NavLink to={"/checkout"}><button className='bg-green-400 rounded-3xl px-6 mt-4 py-3 cursor-pointer'>Processed to Checkout</button></NavLink>
 </div>
 
 

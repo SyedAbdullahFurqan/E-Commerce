@@ -19,7 +19,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Collection from './Collection';
 import Shipping from './Shipping';
-
+import arrival from "./Saad.json"
 const  List= () => {
 const [Cato, setCato] = useState([]);
 const dispatch=useDispatch()
@@ -60,7 +60,7 @@ useEffect(() => {
 }, [Sea]);
   return (
     <>
-<section className='w-full h-fit bg-gray-300'>
+<section className='w-full h-screen bg-gray-300'>
           <div className="w-full ">
       
 
@@ -73,7 +73,7 @@ useEffect(() => {
   >
     {Respons.map((rec, index) => (
       <SwiperSlide key={index}>
-        <div className="grid   md:grid-cols-2  justify-items-center items-center gap-6 ">
+        <div className="grid   md:grid-cols-2 h-screen w-full justify-items-center items-center gap-6 ">
           {/* Text Section */}
           <div className=" mt-4 text-center ms-8  ">
             <NavLink to={`/product/${rec.id}`}>
@@ -84,7 +84,7 @@ useEffect(() => {
               <span className="block text-lg md:text-2xl font-semibold">
                 Description:
               </span>
-              <p className=" sm:w-60   md:w-80 lg:w-100 md:m-auto  m-auto mt-3">
+              <p className=" sm:w-60   md:w-80 lg:w-100 md:m-auto mt-3 m-auto md:mt-3">
                 "{rec.description}"
               </p>
 
@@ -99,7 +99,7 @@ useEffect(() => {
             <img
               src={rec.images[0]}
               alt={rec.title}
-              className=" w-60 md:w-80 md:h-70 object-cover rounded-full transition-transform duration-300 hover:scale-105"
+              className=" w-60 md:w-100 md:h-100 object-cover rounded-full transition-transform duration-300 hover:scale-105"
             />
           </div>
         </div>
@@ -111,14 +111,14 @@ useEffect(() => {
 
 
 
-
-      <div className=' grid  md:grid-cols-3 lg:grid-cols-3  sm:grid-cols-2 grid-cols-1  justify-center text-center m-auto  cursor-pointer  bg-gray-500' >
 {/*
+      <div className=' grid  md:grid-cols-3 lg:grid-cols-3  sm:grid-cols-2 grid-cols-1  justify-center text-center m-auto  cursor-pointer  bg-gray-500' >
+
 <div>
   <img src="img/performe.jpg" alt="" />
   <input type="button" value={"fragrances"} onClick={(s)=> setSea(s.target.value) } />
   
-</div> */}
+</div> 
  
 {Cato.slice(3,9).map((daas)=>{
     
@@ -126,20 +126,20 @@ useEffect(() => {
     <div >
 <NavLink to={`/category`}>
 
-<input type="button" className='cursor-pointer w-46  py-2 text-center  my-5 mx-5 border-2 uppercase bg-cyan-600 rounded-3xl ' value={daas} onClick={(s)=> setSea(s.target.value) }/>
+<input type="button" className='cursor-pointer w-46  py-2 text-center  my-3 mx-3 border-2 uppercase bg-cyan-600 rounded-3xl ' value={daas} onClick={(s)=> setSea(s.target.value) }/>
 </NavLink>
 </div>
   )}) }
 
 
-</div>
+</div>*/}
           </div>
 </section>
 
- <Shipping   />  
+ 
 <Collection/>
 
-
+<Shipping   />  
 <div className='bg-blue-100 pt-5 mt-5'>
 <h1 className='text-3xl text-center '>Category</h1>
 

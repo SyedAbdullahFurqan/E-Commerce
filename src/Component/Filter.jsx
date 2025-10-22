@@ -23,6 +23,17 @@ console.log(Category)
 const dis=useDispatch()
 console.log(filler)
 
+
+
+function reset(params) {
+  setBrand("All")
+   setCategory('All')
+   setSearch("")
+}
+
+
+
+
 // const fil = task.filter((das) => {
 //   const matchesSearch = das.title.toLowerCase().includes(Search.toLowerCase());
 
@@ -86,11 +97,11 @@ dis(Filters(fil))
 
       <div className='mx-2'>
 
-<input type="text"  className='bg-amber-700' value={Search} onChange={(d)=> setSearch(d.target.value) } />
+<input type="text"  className='bg-gray-400 'placeholder='Search' value={Search} onChange={(d)=> setSearch(d.target.value) } />
 
 <div>
 
-<h1>Categoryy</h1>
+<h1 className='my-2'>Categoryy</h1>
 
 <div>
 
@@ -122,7 +133,7 @@ dis(Filters(fil))
 </div>
 
 <div>
-<h1 className='my-2'>Brand</h1>
+<h1 className='mt-4'>Brand</h1>
 {/* <select name="" id="" 
              className='bg-white  w-20 p-2 border-gray-200 border-2 rounded-md ' 
             >
@@ -148,15 +159,15 @@ dis(Filters(fil))
 
 </div>
 
-<div>
+{/* <div>
 
     <h1>Price Range</h1>
 <input type="range" name="" id="" />
 
-</div>
+</div> */}
 
-<div>
-    <button>Reset</button>
+<div className='mt-3'>
+    <button className='py-2 px-6 bg-gray-400 cursor-pointer' onClick={reset }>Reset</button>
 </div>
 
 

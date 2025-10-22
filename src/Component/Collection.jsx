@@ -6,7 +6,7 @@ import List from './List';
 import Shipping from './Shipping';
 import { useDispatch, useSelector } from 'react-redux';
 import { collects } from './Redux/Slice/Action';
-
+import arrival from "./Saad.json"
 const Collection = () => {
 
 
@@ -47,7 +47,7 @@ console.log(datas)
     <div>
       <h1 className='text-3xl text-center my-5 uppercase'>Best Sells Product</h1>
  <div className="grid grid-cols-1   sm:grid-cols-2 md:grid-cols-3  sm:gap-4 md:gap-6 sm:mx-5  md:mx-7 ">
-  {Res?.slice(1, 12).map((saad) => (
+  {arrival?.slice(1, 12).map((saad) => (
     <div
       key={saad.id}
       className="border mt-5 rounded-lg p-4 shadow hover:shadow-lg  transition"
@@ -76,7 +76,7 @@ console.log(datas)
     
 
           <div className='grid grid-cols-2 py-4  '>
-             <p className="text-gray-600">PRICE: ${saad.price}</p>
+             <p className="text-gray-600">PRICE: {saad.price}$</p>
              
                   <button className='bg-red-500 w-30 md:w-27 py-1 lg:w-30 text-amber-50 rounded-3xl cursor-pointer font-semibold justify-self-end-safe '     onClick={() => addToCart(saad)} > Add to Cart</button>
     

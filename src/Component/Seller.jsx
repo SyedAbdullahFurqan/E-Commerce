@@ -2,8 +2,10 @@ import React from 'react'
    import { Carts} from './Redux/Slice/Action';
 import { useDispatch, useSelector } from 'react-redux'; 
 import { NavLink } from 'react-router';
+import saad from "./Saad.json"
 const Seller = () => {
-  
+  console.log(saad)
+
 const getData=  useSelector(state => state.counter.collect)
 console.log(getData)
 
@@ -30,7 +32,7 @@ console.log(getData)
     <div>
       <h1 className='text-3xl text-center my-5 uppercase'>New collection arrive</h1>
  <div className="grid grid-cols-1   sm:grid-cols-2 md:grid-cols-3  sm:gap-4 md:gap-6 sm:mx-5  md:mx-7 ">
-  {getData?.slice(13,28).map((saad) => (
+  {saad?.slice(13,22).map((saad) => (
     <div
       key={saad.id}
       className="border mt-5 rounded-lg p-4 shadow hover:shadow-lg  transition"

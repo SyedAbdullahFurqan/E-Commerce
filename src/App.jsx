@@ -13,6 +13,8 @@ import SingleProduct from './Component/SingleProduct'
 import Carts from './Component/Carts'
 import Checkout from './Component/Checkout'
 import Clothes from './Component/Clothes'
+import About from './Component/About'
+import Contact from './Component/Contact'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -31,7 +33,18 @@ children:[
       element:<> <Home/> </>
  
     },
-    
+       {path:"/Contact",
+
+
+      element:<> <Contact/> </>
+ 
+    },    {path:"/About",
+
+
+      element:<> <About/> </>
+ 
+    },
+   
         {path:"/product",
 
 

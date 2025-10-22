@@ -1,13 +1,13 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router'
-
+import { CgShoppingCart } from "react-icons/cg";
  export const Navbar = () => {
   const item = useSelector(state => state.counter.Cartss)
   return (
     <>
  <div className=''> 
-        <nav className=' w-full flex items-center justify-between  bg-gray-700 sm:px-3 sm:py-3 px-2 py-2 md:px-6 md:py-4 '>
+        <nav className=' w-full flex items-center justify-between gap-4  bg-gray-700 sm:px-3 sm:py-2 px-2 py-2 md:px-6 md:py-3'>
             <div>
 
                 <h1 className=''>    <NavLink  to={"/"}   style={({isActive})=>{
@@ -32,33 +32,39 @@ return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
 return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
         } }>Product</NavLink >
         </li>
-
-     
-
-        <li className=''>
-         <NavLink to={"/Cart" }      style={({isActive})=>{
-
-return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
-        } }  >Cart </NavLink>   
-
-        </li>
-<p className='text-amber-50'>{item.length} </p> 
-   <li>
-         <NavLink to={"/Self" }      style={({isActive})=>{
+ <li>
+         <NavLink to={"/About" }      style={({isActive})=>{
 
 return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
         } }  >ABOUTS</NavLink>   
 
         </li>
 
+     
 
-        
+        <li className=' sm:text-4xl text-2xl '>
+         <NavLink to={"/Cart" }      style={({isActive})=>{
+
+return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
+        } }  ><CgShoppingCart /></NavLink>   
+
+        </li>
+<p className='text-amber-50  '>{item.length} </p> 
+
+
+
+
+
  <li>
             <NavLink to={"/Contact"} style={({isActive})=>{
 
 return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
         } } >Contact  </NavLink> 
         </li>
+
+
+  
+        
 
 
 
