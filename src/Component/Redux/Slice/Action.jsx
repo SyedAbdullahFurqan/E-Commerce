@@ -13,7 +13,8 @@ product:[],
 Cartss:[],
 value:"",
 range:"",
-collect:[]
+collect:[],
+track:""
 }
 
 export const counterSlice = createSlice({
@@ -90,7 +91,7 @@ Delete: (state, action) => {
  
 const  deletItem= action.payload;
 toast.error("delete data")
-state.Cartss=      state.Cartss.filter((del)=> del.id !== deletItem)
+state.Cartss=state.Cartss.filter((del)=> del.id !== deletItem)
  
     },
 
@@ -122,10 +123,14 @@ Price: (state, action) => {
   state.value= action.payload;
  
     },
-
+Tracking: (state, action) => {
+ 
+  state.track= action.payload;
+ 
+    },
   },
 })
-export const { Todolist,Category,Brand,Filters ,Routing,dummy,Grocery,fill,Prodct,Carts ,Delete,increment,decrement,Ranges,Price,collects} = counterSlice.actions
+export const { Todolist,Category,Brand,Filters ,Tracking,Routing,dummy,Grocery,fill,Prodct,Carts ,Delete,increment,decrement,Ranges,Price,collects} = counterSlice.actions
 
 export const counter= counterSlice.reducer
 

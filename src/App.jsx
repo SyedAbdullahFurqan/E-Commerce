@@ -15,6 +15,7 @@ import Checkout from './Component/Checkout'
 import Clothes from './Component/Clothes'
 import About from './Component/About'
 import Contact from './Component/Contact'
+import Tracks from './Component/Tracks'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -79,6 +80,12 @@ children:[
 
 
       element:<> <Checkout/> </>
+ 
+    },
+        {path:"/track",
+
+
+      element:<> <Tracks/> </>
  
     },
     ]

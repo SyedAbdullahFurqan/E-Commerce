@@ -5,51 +5,47 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-
-import { useSelector } from 'react-redux';
+import NoCart from "../assets/bag.png"
+import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import { Tracking } from './Redux/Slice/Action';
+import { Navigate, NavLink, useNavigate } from 'react-router';
 const Checkout = () => {
-
+const Navi=useNavigate()
     const [Details, setDetails] = useState({names:"",emails:"",phone:"",addres:"",city:""});
 const maps= useSelector(state => state.counter.Cartss)
-
+const dis=useDispatch()
 const price= useSelector(state => state.counter.value)
+
+
     console.log(Details)
 function handle(e) {
   setDetails({...Details,
     [e.target.name]:e.target.value})  
 }
 
+
+
+function track(e){
+e.preventDefault()
+console.log(Details)
+dis(Tracking(Details))
+setDetails({names:"",emails:"",phone:"",addres:"",city:""})
+Navi("/track")
+  toast.success("Your Order Placed Successfully")
+}
   return (
     <>
+
+
+
 <h1 className='text-4xl my-4 mx-5'>CheckOUT</h1>
-{/* 
-           <label htmlFor="">Name</label>
-     <input type="text" className='bg-amber-400 w-100' value={Details.names}  name='names'  onChange={handle} />
 
-           <label htmlFor="">Email</label>
-     <input type="email" className='bg-amber-400 w-100' value={Details.emails} name='emails' onChange={handle}  />
-
-
-           <label htmlFor="">PHONE</label>
-     <input type="tel"  className='bg-amber-400 w-100'value={Details.phone} name='phone' onChange={handle} />
-
-
- 
-      <label htmlFor="">Addreses</label>
-     <input type="text" className='bg-amber-400 w-100'  value={Details.addres}  name='addres'  onChange={handle} />
-
-      <label htmlFor="">City</label>
-     <input type="text" className='bg-amber-400 w-100'  value={Details.city}  name='city'  onChange={handle} />
-
-       
-      <div>
-      
-     <input type="radio"  className='mx-2'  value={Details.addres}   />
-       <label htmlFor="">Cash on Delivery</label>
-</div> */}
 <div className='grid grid-cols-2 w-300 m-auto gap-5'>
-   
+
     <div className="mx-5 place-content-start">
+
+        <form action="" onSubmit={track}  >
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -132,11 +128,11 @@ function handle(e) {
         </AccordionDetails>
       </Accordion>
 
-
-
-
-    </div>
-
+  <button onSubmit={track} className='px-6 w-40 m-auto   flex justify-center justify-items-end-safe border-2 rounded-2xl cursor-pointer mt-4 py-3 hover:bg-cyan-500 hover:text-white'  >Place Order</button>
+   
+</form>
+    </div> 
+{maps.length > 0 ? 
 <div className='border-2 border-gray-500 py-4 w-150'>
 
     
@@ -191,13 +187,24 @@ function handle(e) {
 <p className='text-end  mx-5 pb-4'>{Math.ceil(price)}$</p>
 
 </div>
-         <div className=' text-center w-100 m-auto '>
+        
+    
+</div>
+ :  <><div className='flex justify-center items-center'>
+          <img src={NoCart} alt="" />
+          <br />
 
-      <button className='px-6 border-2 rounded-2xl cursor-pointer mt-4 py-3 hover:bg-cyan-500 hover:text-white'  >Place Order</button>
-    </div>
+        </div><div className='flex justify-center'>
+            <p className='uppercase mt-6 mx-3'>No more item, ADD item</p>
+            <NavLink to={"/"}>
+            
+            <button className='bg-cyan-600 text-white rounded-3xl px-6 mt-4 py-3 cursor-pointer'> Go To Shopping</button></NavLink>
+
+
+          </div></>
+  }
 </div>
 
-</div>
     </>
   )
 }

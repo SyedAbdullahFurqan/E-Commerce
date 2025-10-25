@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router';
 import { Routing } from './Redux/Slice/Action';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination ,Autoplay} from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import tshirt from "./img/tshirt.jpg"
 import smart from "./img/smart.jpg"
@@ -26,13 +26,7 @@ const dispatch=useDispatch()
 const [Sea, setSea] = useState("");
 
 const [Respons, setRespons] = useState([]);
-console.log(Sea)
-    const cate=async ()=>{
 
-         const catego= await axios.get("https://dummyjson.com/products/category-list")
-        console.log(catego.data)
-        setCato(catego.data)
-    }
      const routes= async ()=>{
 const routess= await  axios.get(`https://dummyjson.com/products/category/${Sea}`)
       console.log(routess.data)
@@ -54,7 +48,7 @@ setRespons(slice)
 
 useEffect(() => {
     Goat()
-   cate()
+  
    routes()
  
 }, [Sea]);
@@ -68,7 +62,11 @@ useEffect(() => {
     spaceBetween={30}
     navigation={true}
     pagination={{ clickable: true }}
-    modules={[Navigation]}
+    modules={[Navigation,Autoplay, Pagination]}
+      autoplay={{
+    delay: 3000,        // 3 seconds per slide
+    disableOnInteraction: false, // keeps autoplay even after manual scroll
+  }}
     className="mySwiper"
   >
     {Respons.map((rec, index) => (

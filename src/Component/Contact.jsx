@@ -71,7 +71,7 @@ function con(d) {
 <div className=' my-4  w-30 sm:50 md:w-70 lg:w-90 text-white'>Message</div>
 <textarea className='  bg-white w-40 sm:60 md:70 lg:w-80'  name='password'  value={Inp.password} onChange={hand}/>
 <br />
-<input type="submit" className='cursor-pointer mt-3 text-white text-2xl' value="sumbit" />
+<input type="submit" className='cursor-pointer mt-3  rounded-2xl text-2xl bg-white  w-50 py-1' value="sumbit" />
 
 </form>
       </div>

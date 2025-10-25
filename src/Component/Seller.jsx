@@ -22,11 +22,11 @@ console.log(getData)
   const dispac=useDispatch()
   
  
-
-    const addToCart = (product) => {
+const addToCart = (product) => {
   
   dispac(Carts(product))
     };
+ 
  
   return (
     <div>

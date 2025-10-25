@@ -4,6 +4,7 @@ import { NavLink } from 'react-router'
 import { CgShoppingCart } from "react-icons/cg";
  export const Navbar = () => {
   const item = useSelector(state => state.counter.Cartss)
+  const gets=  JSON.parse(localStorage.getItem("cartItems"))
   return (
     <>
  <div className=''> 
@@ -41,12 +42,12 @@ return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
         </li>
 
      
-
-        <li className=' sm:text-4xl text-2xl '>
+  {/* {item.length > 0 &&  }  */}
+     <li className=' sm:text-4xl text-2xl '>
          <NavLink to={"/Cart" }      style={({isActive})=>{
 
 return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
-        } }  ><CgShoppingCart /></NavLink>   
+        } }  ><CgShoppingCart /></NavLink>      
 
         </li>
 <p className='text-amber-50  '>{item.length} </p> 
