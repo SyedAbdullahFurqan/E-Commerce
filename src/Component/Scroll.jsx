@@ -18,7 +18,7 @@ window.addEventListener("scroll",after)
     }, [Off]);
   return (
     <div>
-{Off > 403 &&(
+{Off > 303 &&(
 
     <div className=' cursor-pointer'>
       <button onClick={scrolls} className='bg-cyan-500 p-3 fixed bottom-3 right-0 cursor-pointer '><FaChevronUp /></button>

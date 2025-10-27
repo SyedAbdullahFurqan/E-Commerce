@@ -52,7 +52,7 @@ useEffect(() => {
 
   :<img src={NoCart} alt=""  className='w-100'/>}
 
-      <Scroll/>
+     
   </div>
     <div className=" flex ms-3 my-3 justify-center items-center">
        

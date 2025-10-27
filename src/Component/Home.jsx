@@ -16,6 +16,7 @@ import { NavLink } from 'react-router';
 import List from './List';
 import Shipping from './Shipping';
 import Seller from './Seller';
+import Scroll from './Scroll';
 
 
 
@@ -266,6 +267,7 @@ this my seller product card
 
 <List/>
 <Seller/>
+ <Scroll/>
     </>
   )
 }
