@@ -2,19 +2,20 @@ import React from 'react'
 import { useSelector } from 'react-redux'
 import { NavLink } from 'react-router'
 import { CgShoppingCart } from "react-icons/cg";
+import { LuShoppingBag } from "react-icons/lu";
  export const Navbar = () => {
   const item = useSelector(state => state.counter.Cartss)
   const gets=  JSON.parse(localStorage.getItem("cartItems"))
   return (
     <>
- <div className=''> 
+  <div className=''> 
         <nav className=' w-full flex items-center justify-between gap-4  bg-gray-700 sm:px-3 sm:py-2 px-2 py-2 md:px-6 md:py-3'>
-            <div>
-
-                <h1 className=''>    <NavLink  to={"/"}   style={({isActive})=>{
+            <div className='flex'>
+<span className='text-3xl text-green-400 mx-2'><LuShoppingBag /></span>
+                <h1 className='text-2xl'>    <NavLink  to={"/"}   style={({isActive})=>{
 
 return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
-        } } >Navbar</NavLink></h1>
+        } } >   ShopZone</NavLink></h1>
           </div>
 
       
@@ -73,7 +74,6 @@ return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
  
 </nav>
         </div>
-
 
 
     </>
