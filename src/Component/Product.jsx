@@ -41,7 +41,7 @@ useEffect(() => {
   {/* Main content (9/12 columns) */}
 
   {visibleItems.length > 0 ?    
-  <div className=" lg:col-span-9 md:col-span-8  sm:col-span-7 col-span-6 grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 md:gap-4 sm:gap-2 lg:gap-6 lg:mx-8 md:mx-5 sm: mx-3">
+  <div className=" lg:col-span-9 md:col-span-8  sm:col-span-7 col-span-6 grid lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-3 md:gap-4 sm:gap-2 lg:gap-6 lg:mx-8 md:mx-5 sm:mx-3 mx-2">
     {visibleItems.map((shop) => (
       <Card key={shop.id} card={shop} />
     ))}

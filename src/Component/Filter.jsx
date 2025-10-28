@@ -97,22 +97,22 @@ dis(Filters(fil))
 
       <div className='mx-2'>
 
-<input type="text"  className='bg-gray-400 'placeholder='Search' value={Search} onChange={(d)=> setSearch(d.target.value) } />
+<input type="text"  className='bg-gray-400 w-40 sm:w-full 'placeholder='Search' value={Search} onChange={(d)=> setSearch(d.target.value) } />
 
 <div>
 
 <h1 className='my-2'>Categoryy</h1>
 
-<div>
+<div >
 
 
 {
   category.map((cates)=> {
   return(
-<div className='mx-5 '>
+<div className=' '>
  <input
           type="checkbox"
-          className="mx-3"
+          className="mx-2"
           value={cates}
           checked={Category === cates}   // ✅ correct condition
           onChange={(s) => setCategory(s.target.value)} // ✅ set selected
@@ -120,7 +120,7 @@ dis(Filters(fil))
 
 
 
-<button className='uppercase'>{cates}</button>
+<button className=' text-[12px] sm:text-[20px]'>{cates}</button>
     </div>
 
   )

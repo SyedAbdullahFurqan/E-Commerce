@@ -43,7 +43,7 @@ function delets(product) {
     
     <div>
 {item.length > 0 ?
-        <><div className='grid grid-cols-6 border-2 border-gray-500  mx-3 place-content-center place-items-center my-4  '>
+        <><div className='grid grid-cols-6 border-2 border-gray-500 px-2 mx-3 place-content-center place-items-center my-4  '>
 
           {item.map((daad) => {
 
@@ -53,38 +53,38 @@ function delets(product) {
                 <div className='mt-3'>
 
                   <img src={daad
-                    .images[0]} alt="" className='w-50 h-50' />
+                    .images[0]} alt="" className='w-full ' />
                 </div>
 
 
 
                 <div>
-                  <p className='text-center items-center'> {daad.
+                  <p className='text-center text-[12px] sm:text-2xl items-center'> {daad.
                     title}</p>
                 </div>
                 <div>
-                  <p className='text-center'> Price: {eval(daad.
+                  <p className='text-center text-[12px] sm:text-2xl'> Price: {eval(daad.
                     price)}$
 
                   </p>
                 </div>
                 <div>
-                  <p className='text-center'> Subtotal: {eval(daad.
+                  <p className='text-center text-[12px] sm:text-2xl'> Subtotal: {eval(daad.
                     price * daad.quantity)}$
 
                   </p>
                 </div>
 
 
-                <div className=''>
+                <div className='flex flex-col sm:flex-row items-center gap-3 sm:gap-4'>
                   <button
                     aria-label="Increment value"
                     onClick={() => dis(increment(daad.id))}
                   >
-                    <p className='md:py-2 md:px-4 sm:py-3 sm:px-2 px-3 py-1 bg-gray-300 cursor-pointer'>+</p>
+                    <p className='px-2 mt-3   py-1 bg-gray-300 cursor-pointer'>+</p>
                   </button>
 
-                  <span className='mx-4'>{daad.quantity || count}</span>
+                  <span className=''>{daad.quantity || count}</span>
 
                   <button
                     aria-label="Decrement value"
@@ -92,20 +92,20 @@ function delets(product) {
                   >
 
 
-                    <p className='sm:py-3 sm:px-2 md:py-2 md:px-4 px-1 py-2 bg-red-600 cursor-pointer'>-</p>
+                    <p className='  px-2 mt-3   py-1 bg-red-600 cursor-pointer'>-</p>
                   </button>
 
                 </div>
 
                 <div>
-                  <button className='p-4 border-2 rounded-2xl border-gray-300 cursor-pointer ' onClick={() => delets(daad.id)}>Delete</button>
+                  <button className='sm:py-2 sm:px-3 sm:text-[20px] ms-2  py-2 px-3 text-[10px] border-2 rounded-2xl border-gray-300 cursor-pointer ' onClick={() => delets(daad.id)}>Delete</button>
                 </div>
 
               </>
             )
           })}
 
-        </div><div className='bg-gray-300 border-2 w-80 h-70 rounded-3xl text-center items-center pb-4 m-auto'>
+        </div><div className='bg-gray-300 border-2 w-[88%]  sm:w-[50%] rounded-3xl text-center items-center pb-4 m-auto'>
 
             <h3 className='mt-4'>Cart  Total</h3>
             <div className='grid grid-cols-2 gap-5 my-4'>

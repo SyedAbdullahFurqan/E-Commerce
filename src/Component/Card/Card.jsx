@@ -27,7 +27,7 @@ console.log(Cart)
       <h1 className='line-clamp-1 p-1  font-semibold'> Name : {card.title}</h1>
       <p className='py-3'> PRICE : {card.price}$</p>
 </NavLink>
-      <button className='bg-red-500 px-3 py-2 text-lg rounded-md text-white w-full cursor-pointer flex gap-2 items-center justify-center font-semibold'     onClick={() => addToCart(card)} > Add to Cart</button>
+      <button className='bg-red-500 px-2 py-2 text-lg rounded-md text-white w-full cursor-pointer flex gap-2 items-center justify-center font-semibold'     onClick={() => addToCart(card)} > Add to Cart</button>
     
 
     </div>
