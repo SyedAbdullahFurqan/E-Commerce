@@ -69,8 +69,6 @@ thumbnail
 
 <p className='font-bold text-cyan-800 mt-5 hover:text-fuchsia-700'>  Descirption : {Produc.
 description}</p>
-<p className='mt-8'> Quanity :  <input type="number"  name="" min={1} value={Range } onChange={(e) => setRange(Number(e.target.value))} className='bg-amber-400 text-center' id="" /></p>
-
 
 <button className='px-6 mt-8 py-2 text-lg bg-red-500 text-white rounded-md cursor-pointer'   onClick={() => addToCart(Produc)} >Card</button>
 </div>

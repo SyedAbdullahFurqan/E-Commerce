@@ -24,7 +24,7 @@ function con(d) {
   return (
     <div>
 
-<div className='grid grid-cols-2 w-full h-full'>
+<div className='grid grid-cols-1 sm:grid-cols-2 w-full h-full'>
 
     
 
@@ -38,7 +38,7 @@ function con(d) {
     Bookmark your readings.
   </li>
 
-    <li c>
+    <li >
  Message Us your favorite Product
   </li>
     <li>
