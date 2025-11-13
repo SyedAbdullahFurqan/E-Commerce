@@ -10,7 +10,7 @@ import Scroll from './Scroll'
 
 import NoCart from "../assets/bag.png"
 const Product = () => {
-
+const dis=useDispatch()
 const count = useSelector(state => state.counter.task)
 const faltu = useSelector(state => state.counter.free)
 const [All, setAll] = useState([]);
@@ -28,14 +28,13 @@ useEffect(() => {
   }
 }, [faltu]);
 
-
   return (
     <>
-      <h1 className='uppercase  mx-4 my-2'>Search product</h1>
+      <h1 className='uppercase  mx-4 my-3'>Search product</h1>
 <div className="grid grid-cols-12 gap-4">
   {/* Sidebar (3/12 columns) */}
   <div className="lg:col-span-3 md:col-span-4  sm:col-span-5 col-span-6 ">
-    <Filter />
+    <Filter pages={page} setPage={setPage} />
   </div>
 
   {/* Main content (9/12 columns) */}
@@ -77,7 +76,7 @@ useEffect(() => {
       </div>
 
 <Shop/>
-
+<Scroll/>
     </>
   )
 }

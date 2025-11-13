@@ -9,7 +9,7 @@ const Tracks = () => {
     console.log(tracks)
   return (
    <><div className="flex flex-col w-full items-center justify-center  text-center">
-          <h1 className=" font-bold mb-2">Thank you for your order</h1>
+          <h1 className=" font-bold mb-2 text-3xl">Thank you for your order</h1>
           <p className="mb-6">Your order has been placed</p>
 
           <div className="bg-gray-100 p-6 w-[70%]">
@@ -41,7 +41,7 @@ const Tracks = () => {
     <img
       src={daad.images[0]}
       alt={daad.title}
-      className="w-32 h-32 object-cover rounded-md"
+      className="w-32 h-32 mx-2 object-cover rounded-md"
     />
 
     {/* Product Details */}

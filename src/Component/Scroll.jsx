@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { FaChevronUp } from "react-icons/fa";
 const Scroll = () => {
-
+//py-2 px-3 text-2xl
     const [Off, setOff] = useState(0);
 function after(params) {
     console.log(window.pageYOffset)
@@ -15,7 +15,7 @@ window.addEventListener("scroll",after)
     }
     useEffect(() => {
         after()
-    }, [Off]);
+    }, []);
   return (
     <div>
 {Off > 303 &&(

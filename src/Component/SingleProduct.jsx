@@ -47,7 +47,7 @@ useEffect(() => {
   return (
     <>
       
-<div className='grid grid-cols-2 place-items-center '>
+<div className='grid grid-cols-1  sm:grid-cols-2 place-items-center '>
 
 <div className='flex justify-end items-end'>
 
@@ -57,20 +57,20 @@ thumbnail
 </div>
 
 
-<div className=''>
+<div className='flex flex-col justify-center'>
 
-<h1 className=' text-3xl line-clamp-3 mb-9 hover:text-fuchsia-700'> Name : {Produc.title
+<h1 className=' text-3xl line-clamp-3 mb-9 ms-3 hover:text-pink-600'> Name : {Produc.title
 }</h1>
 
 
 
-<p className='text-2xl hover:text-fuchsia-700'>Price : ${Produc.price} <span></span></p>
+<p className='text-2xl hover:text-pink-600 ms-3'>Price : ${Produc.price} <span></span></p>
 
 
-<p className='font-bold text-cyan-800 mt-5 hover:text-fuchsia-700'>  Descirption : {Produc.
+<p className='font-bold text-cyan-800 mt-5 ms-3 hover:text-pink-600'>  Descirption : {Produc.
 description}</p>
 
-<button className='px-6 mt-8 py-2 text-lg bg-red-500 text-white rounded-md cursor-pointer'   onClick={() => addToCart(Produc)} >Card</button>
+<button className='px-6 mt-4 text-center py-2 w-50 m-auto text-lg bg-red-500 text-white rounded-md cursor-pointer'   onClick={() => addToCart(Produc)} >Card</button>
 </div>
 
 

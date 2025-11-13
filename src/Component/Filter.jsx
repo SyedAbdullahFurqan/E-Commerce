@@ -3,7 +3,7 @@ import { useDispatch ,useSelector} from 'react-redux'
 import { Filters } from './Redux/Slice/Action'
 
 
-const Filter = () => {
+const Filter = ({pages,setPage}) => {
 const filler=useSelector(state => state.counter.fills)
 const category=useSelector(state => state.counter.cate)
 const brand=useSelector(state => state.counter.brand)
@@ -29,6 +29,7 @@ function reset(params) {
   setBrand("All")
    setCategory('All')
    setSearch("")
+   setPage(0)
 }
 
 

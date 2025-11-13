@@ -76,10 +76,10 @@ dispac(Carts(product));
          </NavLink>
     
 
-          <div className='grid grid-cols-2 py-4  '>
+          <div className='grid grid-cols-2 py-2  '>
              <p className="text-gray-600">PRICE: {saads.price}$</p>
     <button
-                className="bg-red-500 text-amber-50 cursor-pointer py-1 px-4 rounded-3xl font-semibold"
+                className="bg-red-500 text-amber-50 cursor-pointer py-1  md:text-[15px] rounded-2xl font-semibold"
                 onClick={() => handleAddToCart(saads)}
               > Adds to Cart</button>
           </div>

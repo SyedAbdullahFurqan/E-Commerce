@@ -15,7 +15,7 @@ import { LuShoppingBag } from "react-icons/lu";
     <span className="text-[10px] sm:text-2xl text-green-400">
       <LuShoppingBag />
     </span>
-    <h1 className="text-lg sm:text-2xl font-semibold">
+    <h1 className="text-sm sm:text-2xl  font-semibold">
       <NavLink
         to="/"
         style={({ isActive }) => ({
@@ -29,7 +29,7 @@ import { LuShoppingBag } from "react-icons/lu";
   </div>
 
   {/* Menu Section */}
-  <ul className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 md:gap-6 text-[10px] sm:text-[16px] md:text-[18px] mt-2 sm:mt-0">
+  <ul className="flex flex-wrap items-center justify-center gap-2 sm:gap-4 md:gap-6 text-[12px] sm:text-[16px] md:text-[18px] mt-2 sm:mt-0">
     <li>
       <NavLink
         to="/"

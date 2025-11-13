@@ -20,33 +20,61 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold text-white mb-3">Quick Links</h3>
           <ul className="space-y-2">
-          
-               <NavLink  to={"/"}   style={({isActive})=>{
+            <li>
+              <NavLink
+                to="/"
+                style={({ isActive }) => ({
+                  color: isActive ? "white" : "LightBlue",
+                  textDecoration: "none",
+                })}
+              >
+                Home
+              </NavLink>
+            </li>
 
-return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
-        } } >Home</NavLink>
-        
-            <li><NavLink  to={"/product"}   style={({isActive})=>{
+            <li>
+              <NavLink
+                to="/product"
+                style={({ isActive }) => ({
+                  color: isActive ? "white" : "LightBlue",
+                  textDecoration: "none",
+                })}
+              >
+                Product
+              </NavLink>
+            </li>
 
-return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
-        } } >Product</NavLink></li>
-            <li>    
-              
-              
-               <li><NavLink  to={"/About"}   style={({isActive})=>{
+            <li>
+              <NavLink
+                to="/about"
+                style={({ isActive }) => ({
+                  color: isActive ? "white" : "LightBlue",
+                  textDecoration: "none",
+                })}
+              >
+                About
+              </NavLink>
+            </li>
 
-return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
-        } } >About</NavLink></li></li>
-            <li><li><NavLink  to={"/Contact"}   style={({isActive})=>{
-
-return{color:isActive ?"white":"Lightblue",textDecoration:"none"}
-        } } >Contact</NavLink></li></li>
+            <li>
+              <NavLink
+                to="/contact"
+                style={({ isActive }) => ({
+                  color: isActive ? "white" : "LightBlue",
+                  textDecoration: "none",
+                })}
+              >
+                Contact
+              </NavLink>
+            </li>
           </ul>
         </div>
 
         {/* Customer Service */}
         <div>
-          <h3 className="text-lg font-semibold text-white mb-3">Customer Service</h3>
+          <h3 className="text-lg font-semibold text-white mb-3">
+            Customer Service
+          </h3>
           <ul className="space-y-2">
             <li><a href="#" className="hover:text-white transition">FAQs</a></li>
             <li><a href="#" className="hover:text-white transition">Shipping</a></li>
